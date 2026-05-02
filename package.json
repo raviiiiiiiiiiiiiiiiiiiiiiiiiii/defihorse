@@ -50,7 +50,8 @@
     "dev": "concurrently \"npm run server\" \"npm run start\""
   },
   "overrides": {
-    "ajv": "^8.0.0"
+    "fork-ts-checker-webpack-plugin": "6.5.3",
+    "ajv": "^6.12.6"
   },
   "eslintConfig": {
     "extends": [
