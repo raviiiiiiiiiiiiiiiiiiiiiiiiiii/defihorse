@@ -8,7 +8,7 @@ import {
 	testNftStakingContractAddress,
 } from "../utils/constants";
 
-const { ethereum } = window;
+// ethereum is accessed at runtime only
 let ethStakingContractToGET,
 	ethStakingContractToPOST,
 	nftCollectionContractToGET,
@@ -465,3 +465,4 @@ export const nftClaimRewards = async (address) => {
 		};
 	}
 };
+
