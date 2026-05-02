@@ -2,4 +2,3 @@
   "buildCommand": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
   "outputDirectory": "build"
 }
-
