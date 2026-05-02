@@ -3,14 +3,10 @@
   "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "react-scripts build",
   "outputDirectory": "build",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "build": {
