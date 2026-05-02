@@ -1,0 +1,429 @@
+/* ============================================================
+   ABOUT US — matches DeFiHorse design tokens
+   Colors: #131313 bg | #5F3DFF primary purple | #C03DFF accent
+   Font:   RNS Sanz (already loaded globally)
+   ============================================================ */
+
+.AboutUs {
+  background: #131313;
+  color: #ffffff;
+  overflow-x: hidden;
+  padding-bottom: 120px;
+}
+
+/* shared section title — same pattern as Dao / Partners */
+.AboutUs .topTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 20px;
+}
+.AboutUs .topTitle .text {
+  display: flex;
+}
+.AboutUs .title {
+  font-family: RNS Sanz;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+  white-space: nowrap;
+}
+.AboutUs .title1 { color: #ffffff; }
+.AboutUs .title2 { color: #5F3DFF; }
+.AboutUs #line {
+  width: 300px;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(192, 61, 255, 0.04),
+    rgba(95, 61, 255, 1),
+    rgba(192, 61, 255, 0.04)
+  );
+}
+
+/* gradient blobs — same class pattern as landing page */
+.gradient--about1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 61, 255, 0.18) 0%, transparent 70%);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.gradient--about2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 61, 255, 0.12) 0%, transparent 70%);
+  top: 0; right: -100px;
+  pointer-events: none;
+  z-index: 0;
+}
+.gradient--about3 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 61, 255, 0.14) 0%, transparent 70%);
+  left: -80px; top: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.gradient--about4 {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 61, 255, 0.2) 0%, transparent 70%);
+  left: 50%; transform: translateX(-50%);
+  top: -50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HERO ── */
+.au-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+.au-hero-sub {
+  font-family: RNS Sanz;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 680px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ── MISSION ── */
+.au-mission {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 60px;
+  flex-wrap: wrap;
+}
+.au-mission-text {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.au-mission-text .title {
+  font-size: 32px;
+}
+.au-mission-body {
+  font-family: RNS Sanz;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 20px;
+}
+.au-mission-card {
+  width: 340px;
+  height: 300px;
+  border: 1px solid #5F3DFF;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(95,61,255,0.12) 0%, rgba(192,61,255,0.06) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.au-mission-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.au-big-icon {
+  font-size: 64px;
+  background: linear-gradient(135deg, #5F3DFF, #C03DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.au-card-label {
+  font-family: RNS Sanz;
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.au-card-sub {
+  font-family: RNS Sanz;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── STATS ── */
+.au-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 60px 40px;
+}
+.au-stat-card {
+  width: 200px;
+  min-height: 160px;
+  border: 1px solid rgba(95, 61, 255, 0.4);
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(95,61,255,0.08), rgba(192,61,255,0.04));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.au-stat-card:hover {
+  border-color: #5F3DFF;
+  transform: translateY(-4px);
+}
+.au-stat-icon {
+  font-size: 28px;
+  background: linear-gradient(135deg, #5F3DFF, #C03DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.au-stat-value {
+  font-family: RNS Sanz;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+.au-stat-label {
+  font-family: RNS Sanz;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── VALUES ── */
+.au-values {
+  position: relative;
+  padding: 60px 40px;
+}
+.au-values-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 50px;
+}
+.au-value-card {
+  width: 300px;
+  border: 1px solid rgba(95, 61, 255, 0.35);
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(95,61,255,0.07), rgba(192,61,255,0.03));
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.au-value-card:hover {
+  border-color: #5F3DFF;
+  transform: translateY(-5px);
+}
+.au-value-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+}
+.au-value-icon-wrap i {
+  font-size: 26px;
+}
+.au-value-title {
+  font-family: RNS Sanz;
+  font-size: 18px;
+  font-weight: 900;
+}
+.au-value-desc {
+  font-family: RNS Sanz;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* ── TEAM ── */
+.au-team {
+  padding: 60px 40px;
+}
+.au-team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 50px;
+}
+.au-team-card {
+  width: 240px;
+  border: 1px solid rgba(95, 61, 255, 0.35);
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(95,61,255,0.07), rgba(0,0,0,0.2));
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.au-team-card:hover {
+  border-color: #5F3DFF;
+  transform: translateY(-5px);
+}
+.au-team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.au-team-avatar i {
+  font-size: 34px;
+}
+.au-team-name {
+  font-family: RNS Sanz;
+  font-size: 17px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.au-team-role {
+  font-family: RNS Sanz;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.au-team-bio {
+  font-family: RNS Sanz;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ── CTA ── */
+.au-cta {
+  position: relative;
+  padding: 100px 40px 60px;
+  display: flex;
+  justify-content: center;
+}
+.au-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  max-width: 700px;
+}
+.au-cta-inner .title {
+  font-size: 34px;
+}
+.au-cta-sub {
+  font-family: RNS Sanz;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+  line-height: 26px;
+}
+.au-cta-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.au-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #7335d6, #7936d9, #8b38e4, #963aea);
+  font-family: RNS Sanz;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+.au-btn-primary:hover { color: #ffffff; opacity: 0.9; }
+.au-btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  border-radius: 10px;
+  border: 1px solid #5F3DFF;
+  font-family: RNS Sanz;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  background: transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.au-btn-outline:hover { border-color: #C03DFF; color: #ffffff; }
+
+/* ── RESPONSIVE ── */
+@media screen and (max-width: 900px) {
+  .AboutUs .title { font-size: 26px !important; }
+  .AboutUs #line { width: 100px; }
+  .au-mission { padding: 60px 24px; gap: 40px; }
+  .au-mission-card { width: 100%; max-width: 340px; }
+  .au-stats { padding: 40px 20px; }
+  .au-stat-card { width: 150px; }
+  .au-stat-value { font-size: 28px; }
+  .au-values-grid, .au-team-grid { gap: 20px; }
+  .au-value-card { width: 260px; }
+  .au-team-card { width: 200px; }
+  .au-cta-inner .title { font-size: 24px !important; }
+}
+
+@media screen and (max-width: 600px) {
+  .au-hero-sub { font-size: 15px; }
+  .au-stat-card { width: 140px; min-height: 130px; }
+  .au-value-card, .au-team-card { width: 100%; max-width: 320px; }
+  .au-btn-primary, .au-btn-outline { padding: 12px 24px; font-size: 14px; }
+}
