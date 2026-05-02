@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-
+import React from "react";
 import { useIsInViewport } from "./useIsInViewport";
+
 export const AnimatedSection = ({ getStyles, children }) => {
   const elementRef = React.useRef();
   const isInViewport = useIsInViewport(elementRef);
