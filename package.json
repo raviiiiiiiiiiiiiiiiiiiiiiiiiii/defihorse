@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@sendgrid/mail": "^8.1.3",
     "@tanstack/react-query": "^5.22.2",
     "@testing-library/jest-dom": "^5.17.0",
@@ -43,7 +44,7 @@
   },
   "scripts": {
     "start": "node server/server.js | react-scripts start",
-    "build": "node server/server.js | react-scripts build",
+    "build": "craco build",
     "test": "node server/server.js | react-scripts test",
     "eject": "node server/server.js | react-scripts eject"
   },
