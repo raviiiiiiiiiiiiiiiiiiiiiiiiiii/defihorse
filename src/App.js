@@ -1,4 +1,3 @@
-// import { BrowserRouter as Routes, Router, Route } from "react-router-dom";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Funding } from "./fundingcomponents/Funding";
@@ -22,53 +21,50 @@ import { MyContext } from "./landingcomponents/MyContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { LandingPage } from "./landingcomponents/LandingPage";
+import { AboutUs } from "./landingcomponents/AboutUs"; // ← NEW
+
 const App = () => {
-    // const [alertState, setAlertState] = useState(false);
-    // const alert = useContext(MyContext);
-    const setAlert = (obj) => {
-        // setAlertState(obj.status);
-        if (obj.status === "success")
-            toast.success(obj.msg, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                // transition: Bounce,
-            });
-        else
-            toast.error(obj.msg, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                // transition: Bounce,
-            });
-    };
-    return (
-        <div className="App">
-            <ContextProvider>
-                <MyContext.Provider value={{ setAlert }}>
-                    <ToastContainer
-                        toastStyle={{ backgroundColor: "#7936d9" }}
-                    />
-                    <Router>
-                        <Routes>
-                            <Route path="/" element={<LandingPage />} />
-                            <Route path="token" element={<Funding />} />
-                        </Routes>
-                    </Router>
-                </MyContext.Provider>
-            </ContextProvider>
-        </div>
-    );
+  const setAlert = (obj) => {
+    if (obj.status === "success")
+      toast.success(obj.msg, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    else
+      toast.error(obj.msg, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+  };
+
+  return (
+    <div className="App">
+      <ContextProvider>
+        <MyContext.Provider value={{ setAlert }}>
+          <ToastContainer toastStyle={{ backgroundColor: "#7936d9" }} />
+          <Router>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/token" element={<Funding />} />
+              <Route path="/about" element={<AboutUs />} /> {/* ← NEW */}
+            </Routes>
+          </Router>
+        </MyContext.Provider>
+      </ContextProvider>
+    </div>
+  );
 };
 
 export default App;
