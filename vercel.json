@@ -1,7 +1,18 @@
 {
+  "version": 2,
   "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "react-scripts build",
   "outputDirectory": "build",
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "build": {
     "env": {
       "NODE_VERSION": "20"
