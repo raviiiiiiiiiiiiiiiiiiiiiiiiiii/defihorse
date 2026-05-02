@@ -1,5 +1,5 @@
 {
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "craco build",
+  "buildCommand": "react-scripts build",
   "outputDirectory": "build"
 }
