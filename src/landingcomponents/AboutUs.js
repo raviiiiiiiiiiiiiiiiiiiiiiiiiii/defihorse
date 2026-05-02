@@ -1,23 +1,31 @@
+import { Header } from "./Header";
 import { AnimatedSection } from "./AnimatedSection";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./styleAboutUs.css";
 
+// Subtle fade up — starts slightly below, fades in
 const getFadeTop = (inView) => ({
-  transition: "all 1s ease-in",
+  transition: "opacity 0.8s ease, transform 0.8s ease",
   opacity: inView ? "1" : "0",
-  transform: inView ? "" : "translateY(60px)",
+  transform: inView ? "translateY(0)" : "translateY(24px)",
 });
 
 const getFadeLeft = (inView) => ({
-  transition: "all 1.2s ease-in",
+  transition: "opacity 0.9s ease, transform 0.9s ease",
   opacity: inView ? "1" : "0",
-  transform: inView ? "" : "translateX(-100%)",
+  transform: inView ? "translateX(0)" : "translateX(-40px)",
 });
 
 const getFadeRight = (inView) => ({
-  transition: "all 1.2s ease-in",
+  transition: "opacity 0.9s ease, transform 0.9s ease",
   opacity: inView ? "1" : "0",
-  transform: inView ? "" : "translateX(100%)",
+  transform: inView ? "translateX(0)" : "translateX(40px)",
+});
+
+// Hero is always visible — no animation needed since it's above the fold
+const alwaysVisible = () => ({
+  opacity: "1",
+  transform: "none",
 });
 
 const teamMembers = [
@@ -83,10 +91,13 @@ export const AboutUs = () => {
   return (
     <div className="AboutUs">
 
-      {/* ── HERO ── */}
+      {/* ── NAVBAR — same as homepage ── */}
+      <Header />
+
+      {/* ── HERO — always visible, no scroll needed ── */}
       <div className="au-hero">
         <div className="gradient gradient--about1"></div>
-        <AnimatedSection getStyles={getFadeTop}>
+        <AnimatedSection getStyles={alwaysVisible}>
           <div className="topTitle">
             <div id="line"></div>
             <div className="text">
@@ -96,7 +107,7 @@ export const AboutUs = () => {
             <div id="line"></div>
           </div>
         </AnimatedSection>
-        <AnimatedSection getStyles={getFadeTop}>
+        <AnimatedSection getStyles={alwaysVisible}>
           <p className="au-hero-sub">
             A horse racing Metaverse e-sports game built on Blockchain technology and NFTs.
             We're redefining what it means to play, earn, and own in the digital age.
