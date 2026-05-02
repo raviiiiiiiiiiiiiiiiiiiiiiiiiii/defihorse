@@ -2,9 +2,6 @@ import { useAccount, useDisconnect } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useEffect } from "react";
 
-import HeaderIconR1 from "../images/HeaderIconR1.svg";
-import HeaderIconR2 from "../images/HeaderIconR2.svg";
-import { NonceTooLowError } from "viem";
 export const Wallnetbtn = () => {
   const { isConnecting, isDisconnected } = useAccount();
   const { open } = useWeb3Modal();
